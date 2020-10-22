@@ -26,6 +26,10 @@ export class ContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.WeatherData = { 
+        1:{ main : {},
+      weather: [{main:''}]}
+    }
     this.getLocalStorage()
     // this.WeatherData = { 
     //   1:{ main : {},
@@ -94,25 +98,7 @@ export class ContentComponent implements OnInit {
     this.city = event.target.value;
     this.getWeatherData(this.city, id)
     console.log(id)
-    if(id==1){
-      this.switchInput1 = 'weather';
-    }else if(id==2){
-      this.switchInput2 = 'weather';
-    }else if (id==3) {
-      this.switchInput3 = 'weather';
-    }else if(id==4){
-      this.switchInput4 = 'weather';
-    }else if (id==5) {
-      this.switchInput5 = 'weather';
-    }else if(id==6){
-      this.switchInput6 = 'weather';
-    }else if (id==7) {
-      this.switchInput7 = 'weather';
-    }else if(id==8){
-      this.switchInput8 = 'weather';
-    }else if (id==9) {
-      this.switchInput9 = 'weather';
-    }
+    
     }
 
     getLocalStorage(){
@@ -213,9 +199,6 @@ export class ContentComponent implements OnInit {
       .then(response => response.json())
       .then(data => {
         this.setWeatherData(data, id)
-        console.log(data);
-      })
-      .catch(error => { 
         if(id==1){
           this.switchInput1 = 'weather';
         }else if(id==2){
@@ -235,11 +218,50 @@ export class ContentComponent implements OnInit {
         }else if (id==9) {
           this.switchInput9 = 'weather';
         }
+        console.log(data);
+      })
+      .catch((error) => {
+            if(id==1){
+              this.updateWeatherData(id)
+              this.switchInput1 = 'error';
+            }else if(id==2){
+              this.updateWeatherData(id)
+              this.switchInput2 = 'error';
+            }else if (id==3) {
+              this.updateWeatherData(id)
+              this.switchInput3 = 'error';
+            }else if(id==4){
+              this.updateWeatherData(id)
+              this.switchInput4 = 'error';
+            }else if (id==5) {
+              this.updateWeatherData(id)
+              this.switchInput5 = 'error';
+            }else if(id==6){
+              this.updateWeatherData(id)
+              this.switchInput6 = 'error';
+            }else if (id==7) {
+              this.updateWeatherData(id)
+              this.switchInput7 = 'error';
+            }else if(id==8){
+              this.updateWeatherData(id)
+              this.switchInput8 = 'error';
+            }else if (id==9) {
+              this.updateWeatherData(id)
+              this.switchInput9 = 'error';
+            }
       })
 
 
     }
   
+    updateWeatherData(id){
+      this.WeatherData[id] = {
+        main : {},
+        weather: [{main:''}]
+      }
+      localStorage.removeItem(id)
+    }
+
     setWeatherData(data ,id){
 
       this.WeatherData[id]= data
