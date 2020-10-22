@@ -124,7 +124,7 @@
           <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[5].weather[0].main) ,'background-size': '100% 100%' }"> 
                 <div [ngSwitch]="switchInput5" id=5 #panel5 >
                   <div *ngSwitchCase="'edit'">
-                        <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel1.id)">
+                        <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel5.id)">
                         <small class="form-text text-white text-center" >Press 'Enter'</small>
                   </div>
                   <div *ngSwitchCase="'weather'">
@@ -213,33 +213,33 @@
    </div>
 
       <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[8].weather[0].main) ,'background-size': '100% 100%' }">
-                <div [ngSwitch]="switchInput9" id=8 #panel8 >
-                  <div *ngSwitchCase="'edit'">
-                        <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel8.id)">
-                        <small class="form-text text-white text-center" >Press 'Enter'</small>
-                  </div>
-                  <div *ngSwitchCase="'weather'">
-                        <div  class="text-center">
-                          <div>{{WeatherData[8].name}}</div>
-                          <div>{{WeatherData[8].temp_celcius}}°</div>
-                          <div>{{WeatherData[8].temp_min}}° / {{WeatherData[8].temp_max}}°</div>
-                          <div>Weather Condition: {{WeatherData[8].weather[0].main}}</div>
-                          <div>Feels Like: {{WeatherData[8].temp_Feels_Like}}°</div>
-                          <div>Humidity: {{WeatherData[8].main.humidity}}%</div>
-                        </div>
-                        <br>
-                        <button class="btn btn-outline-light btn-sm" type="button" (click)="toggleSwitch(panel8.id)">Edit Location</button>
-                  </div>
-                  <div *ngSwitchCase="'error'" class="text-center">
-                      <span> Wrong city name </span>
-                      <br>
-                      <br>
-                      <button class="btn btn-outline-light btn-sm" type="button" (click)="toggleSwitch(panel8.id)">Edit Location</button>        
-                  </div>
-                  <div *ngSwitchDefault>
-                        <button type="button" class="btn btn-primary" (click)="toggleSwitch(panel8.id)">Select Location</button>
-                  </div>
-           </div> 
+        <div [ngSwitch]="switchInput8" id=8 #panel8 >
+          <div *ngSwitchCase="'edit'">
+                <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel8.id)">
+                <small class="form-text text-white text-center" >Press 'Enter'</small>
+          </div>
+          <div *ngSwitchCase="'weather'">
+                <div  class="text-center">
+                  <div>{{WeatherData[8].name}}</div>
+                  <div>{{WeatherData[8].temp_celcius}}°</div>
+                  <div>{{WeatherData[8].temp_min}}° / {{WeatherData[8].temp_max}}°</div>
+                  <div>Weather Condition: {{WeatherData[8].weather[0].main}}</div>
+                  <div>Feels Like: {{WeatherData[8].temp_Feels_Like}}°</div>
+                  <div>Humidity: {{WeatherData[8].main.humidity}}%</div>
+                </div>
+                <br>
+                <button class="btn btn-outline-light btn-sm" type="button" (click)="toggleSwitch(panel8.id)">Edit Location</button>
+          </div>
+          <div *ngSwitchCase="'error'" class="text-center">
+              <span> Wrong city name </span>
+              <br>
+              <br>
+              <button class="btn btn-outline-light btn-sm" type="button" (click)="toggleSwitch(panel8.id)">Edit Location</button>        
+          </div>
+          <div *ngSwitchDefault>
+                <button type="button" class="btn btn-primary" (click)="toggleSwitch(panel8.id)">Select Location</button>
+          </div>
+   </div>  
    </div>
               
    <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[9].weather[0].main) ,'background-size': '100% 100%' }">
