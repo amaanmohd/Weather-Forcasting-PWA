@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
 
-      <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[1].weather[0].main) ,'background-size': '100% 100%' }">
+      <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[1].weather[0].main) ,'background-size': '100% 100%' }">
                       <div [ngSwitch]="switchInput1" id=1 #panel1 >
                               <div *ngSwitchCase="'edit'">
                                     <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel1.id)">
@@ -31,7 +31,7 @@
                        </div> 
               </div>
 
-        <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[2].weather[0].main) ,'background-size': '100% 100%' }">  
+        <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[2].weather[0].main) ,'background-size': '100% 100%' }">  
                 <div [ngSwitch]="switchInput2" id=2 #panel2 >
                   <div *ngSwitchCase="'edit'">
                     <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel2.id)">
@@ -61,7 +61,7 @@
                 </div>               
         </div>
               
-        <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[3].weather[0].main) ,'background-size': '100% 100%' }">
+        <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[3].weather[0].main) ,'background-size': '100% 100%' }">
                 <div [ngSwitch]="switchInput3" id=3 #panel3 >
                   <div *ngSwitchCase="'edit'">
                     <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel3.id)">
@@ -91,7 +91,7 @@
                 </div> 
         </div>
               
-            <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[4].weather[0].main) ,'background-size': '100% 100%' }">
+            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[4].weather[0].main) ,'background-size': '100% 100%' }">
               <div [ngSwitch]="switchInput4" id=4 #panel4 >
                   <div *ngSwitchCase="'edit'">
                         <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel4.id)">
@@ -121,7 +121,7 @@
            </div> 
    </div>
 
-          <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[5].weather[0].main) ,'background-size': '100% 100%' }"> 
+          <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[5].weather[0].main) ,'background-size': '100% 100%' }"> 
                 <div [ngSwitch]="switchInput5" id=5 #panel5 >
                   <div *ngSwitchCase="'edit'">
                         <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel5.id)">
@@ -151,7 +151,7 @@
            </div> 
    </div>
               
-   <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[6].weather[0].main) ,'background-size': '100% 100%' }">
+   <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[6].weather[0].main) ,'background-size': '100% 100%' }">
                 <div [ngSwitch]="switchInput6" id=6 #panel6 >
                   <div *ngSwitchCase="'edit'">
                         <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel6.id)">
@@ -182,7 +182,7 @@
            </div> 
    </div>
 
-        <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[7].weather[0].main) ,'background-size': '100% 100%' }">
+        <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[7].weather[0].main) ,'background-size': '100% 100%' }">
                 <div [ngSwitch]="switchInput7" id=7 #panel7 >
                   <div *ngSwitchCase="'edit'">
                         <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel7.id)">
@@ -212,7 +212,7 @@
            </div> 
    </div>
 
-      <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[8].weather[0].main) ,'background-size': '100% 100%' }">
+      <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[8].weather[0].main) ,'background-size': '100% 100%' }">
         <div [ngSwitch]="switchInput8" id=8 #panel8 >
           <div *ngSwitchCase="'edit'">
                 <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel8.id)">
@@ -242,7 +242,7 @@
    </div>  
    </div>
               
-   <div class="col border p-3 mb-2 bg-primary text-white" [ngStyle]="{'background-image': getUrl(WeatherData[9].weather[0].main) ,'background-size': '100% 100%' }">
+   <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{'background-image': getUrl(WeatherData[9].weather[0].main) ,'background-size': '100% 100%' }">
                 <div [ngSwitch]="switchInput9" id=9 #panel9 >
                   <div *ngSwitchCase="'edit'">
                         <input type="text" class="form-control form-control-sm" placeholder="City Name"  (keyup.enter)="OnInput($event, panel9.id)">
