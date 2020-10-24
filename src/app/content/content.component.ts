@@ -72,6 +72,7 @@ export class ContentComponent implements OnInit {
   OnInput(event: any, id) {
     let city = event.target.value;
     if (id == 1) {
+      this.switchInput1 = 'loading'
       this.sub1 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -84,6 +85,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 2) {
+      this.switchInput2 = 'loading'
       this.sub2 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -96,6 +98,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 3) {
+      this.switchInput3 = 'loading'
       this.sub3 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -108,6 +111,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 4) {
+      this.switchInput4 = 'loading'
       this.sub4 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -120,6 +124,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 5) {
+      this.switchInput5 = 'loading'
       this.sub5 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -132,6 +137,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 6) {
+      this.switchInput6 = 'loading'
       this.sub6 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -144,6 +150,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 7) {
+      this.switchInput7 = 'loading'
       this.sub7 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -156,6 +163,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 8) {
+      this.switchInput8 = 'loading'
       this.sub8 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
@@ -168,6 +176,7 @@ export class ContentComponent implements OnInit {
         }
       );
     } else if (id == 9) {
+      this.switchInput9 = 'loading'
       this.sub9 = this.weatherService.getWeatherData(city).subscribe(
         (data) => {
           this.setWeatherData(data, id);
