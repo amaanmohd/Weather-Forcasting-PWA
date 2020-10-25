@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Subject } from 'rxjs';
-import { delay, takeUntil } from 'rxjs/operators';
 import { CityService } from '../city.service';
 
 @Component({
@@ -9,7 +7,6 @@ import { CityService } from '../city.service';
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
-  protected ngUnsubscribe: Subject<void> = new Subject<void>();
   cloudy = [
     'Clouds',
     'Mist',
@@ -349,68 +346,6 @@ export class ContentComponent implements OnInit {
       this.switchInput9 = 'weather';
     }
   }
-
-  // getWeatherData(city, id) {
-  //   let api =
-  //     'https://api.openweathermap.org/data/2.5/weather?q=' +
-  //     city +
-  //     '&appid=656e6411f16bc453a68ffc8614adf9ce';
-  //   fetch(api)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.setWeatherData(data, id);
-  //       if (id == 1) {
-  //         this.switchInput1 = 'weather';
-  //       } else if (id == 2) {
-  //         this.switchInput2 = 'weather';
-  //       } else if (id == 3) {
-  //         this.switchInput3 = 'weather';
-  //       } else if (id == 4) {
-  //         this.switchInput4 = 'weather';
-  //       } else if (id == 5) {
-  //         this.switchInput5 = 'weather';
-  //       } else if (id == 6) {
-  //         this.switchInput6 = 'weather';
-  //       } else if (id == 7) {
-  //         this.switchInput7 = 'weather';
-  //       } else if (id == 8) {
-  //         this.switchInput8 = 'weather';
-  //       } else if (id == 9) {
-  //         this.switchInput9 = 'weather';
-  //       }
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       if (id == 1) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput1 = 'error';
-  //       } else if (id == 2) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput2 = 'error';
-  //       } else if (id == 3) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput3 = 'error';
-  //       } else if (id == 4) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput4 = 'error';
-  //       } else if (id == 5) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput5 = 'error';
-  //       } else if (id == 6) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput6 = 'error';
-  //       } else if (id == 7) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput7 = 'error';
-  //       } else if (id == 8) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput8 = 'error';
-  //       } else if (id == 9) {
-  //         this.updateWeatherData(id);
-  //         this.switchInput9 = 'error';
-  //       }
-  //     });
-  // }
 
   updateWeatherData(id) {
     this.WeatherData[id] = {

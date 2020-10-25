@@ -1,445 +1,450 @@
 <div class="container">
       <div class="row">
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[1].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput1" id="1" #panel1>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel1.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[1].name }}</div>
-                                    <div>{{ WeatherData[1].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[1].temp_min }}° / {{ WeatherData[1].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[1].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[1].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[1].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel1.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel1.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel1.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[2].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput2" id="2" #panel2>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel2.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[2].name }}</div>
-                                    <div>{{ WeatherData[2].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[2].temp_min }}° / {{ WeatherData[2].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[2].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[2].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[2].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel2.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel2.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel2.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[3].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput3" id="3" #panel3>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel3.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[3].name }}</div>
-                                    <div>{{ WeatherData[3].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[3].temp_min }}° / {{ WeatherData[3].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[3].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[3].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[3].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel3.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel3.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel3.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[4].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput4" id="4" #panel4>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel4.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[4].name }}</div>
-                                    <div>{{ WeatherData[4].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[4].temp_min }}° / {{ WeatherData[4].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[4].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[4].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[4].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel4.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel4.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel4.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[5].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput5" id="5" #panel5>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel5.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[5].name }}</div>
-                                    <div>{{ WeatherData[5].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[5].temp_min }}° / {{ WeatherData[5].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[5].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[5].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[5].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel5.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel5.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel5.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[6].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput6" id="6" #panel6>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel6.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[6].name }}</div>
-                                    <div>{{ WeatherData[6].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[6].temp_min }}° / {{ WeatherData[6].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[6].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[6].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[6].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel6.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel6.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel6.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[7].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput7" id="7" #panel7>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel7.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[7].name }}</div>
-                                    <div>{{ WeatherData[7].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[7].temp_min }}° / {{ WeatherData[7].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[7].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[7].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[7].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel7.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel7.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel7.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[8].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput8" id="8" #panel8>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel8.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[8].name }}</div>
-                                    <div>{{ WeatherData[8].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[8].temp_min }}° / {{ WeatherData[8].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[8].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[8].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[8].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel8.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel8.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel8.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
-
-            <div class="col border p-3 mb-2 bg-primary text-white font-weight-bold" [ngStyle]="{
-        'background-image': getUrl(WeatherData[9].weather[0].main),
-        'background-size': '100% 100%'
-      }">
-                  <div [ngSwitch]="switchInput9" id="9" #panel9>
-                        <div *ngSwitchCase="'edit'">
-                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
-                                    (keyup.enter)="OnInput($event, panel9.id)" />
-                              <small class="form-text text-white text-center">Press 'Enter'</small>
-                        </div>
-                        <div *ngSwitchCase="'loading'" class="text-center">
-                              <div class="spinner-grow text-light" role="status">
-                                    <span class="sr-only">Loading...</span>
-                              </div>
-                        </div>
-                        <div *ngSwitchCase="'weather'">
-                              <div class="text-center">
-                                    <div>{{ WeatherData[9].name }}</div>
-                                    <div>{{ WeatherData[9].temp_celcius }}°</div>
-                                    <div>
-                                          {{ WeatherData[9].temp_min }}° / {{ WeatherData[9].temp_max }}°
-                                    </div>
-                                    <div>Weather Condition: {{ WeatherData[9].weather[0].main }}</div>
-                                    <div>Feels Like: {{ WeatherData[9].temp_Feels_Like }}°</div>
-                                    <div>Humidity: {{ WeatherData[9].main.humidity }}%</div>
-                              </div>
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel9.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchCase="'error'" class="text-center">
-                              <span> Wrong city name </span>
-                              <br />
-                              <br />
-                              <button class="btn btn-outline-light btn-sm" type="button"
-                                    (click)="toggleSwitch(panel9.id)">
-                                    Edit Location
-                              </button>
-                        </div>
-                        <div *ngSwitchDefault>
-                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel9.id)">
-                                    Select Location
-                              </button>
-                        </div>
-                  </div>
-            </div>
+            <div class="col min-vh-100">
+                  <div class="row">
+                  <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[1].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput1" id="1" #panel1>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel1.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[1].name }}</div>
+                                                    <div>{{ WeatherData[1].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[1].temp_min }}° / {{ WeatherData[1].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[1].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[1].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[1].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel1.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel1.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel1.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[2].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput2" id="2" #panel2>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel2.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[2].name }}</div>
+                                                    <div>{{ WeatherData[2].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[2].temp_min }}° / {{ WeatherData[2].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[2].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[2].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[2].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel2.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel2.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel2.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[3].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput3" id="3" #panel3>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel3.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[3].name }}</div>
+                                                    <div>{{ WeatherData[3].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[3].temp_min }}° / {{ WeatherData[3].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[3].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[3].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[3].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel3.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel3.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel3.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[4].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput4" id="4" #panel4>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel4.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[4].name }}</div>
+                                                    <div>{{ WeatherData[4].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[4].temp_min }}° / {{ WeatherData[4].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[4].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[4].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[4].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel4.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel4.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel4.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[5].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput5" id="5" #panel5>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel5.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[5].name }}</div>
+                                                    <div>{{ WeatherData[5].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[5].temp_min }}° / {{ WeatherData[5].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[5].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[5].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[5].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel5.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel5.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel5.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[6].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput6" id="6" #panel6>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel6.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[6].name }}</div>
+                                                    <div>{{ WeatherData[6].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[6].temp_min }}° / {{ WeatherData[6].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[6].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[6].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[6].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel6.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel6.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel6.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[7].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput7" id="7" #panel7>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel7.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[7].name }}</div>
+                                                    <div>{{ WeatherData[7].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[7].temp_min }}° / {{ WeatherData[7].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[7].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[7].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[7].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel7.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel7.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel7.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[8].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput8" id="8" #panel8>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel8.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[8].name }}</div>
+                                                    <div>{{ WeatherData[8].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[8].temp_min }}° / {{ WeatherData[8].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[8].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[8].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[8].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel8.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel8.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel8.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>
+                
+                            <div class="col border p-3 bg-primary text-white font-weight-bold" [ngStyle]="{
+                        'background-image': getUrl(WeatherData[9].weather[0].main),
+                        'background-size': '100% 100%'
+                      }">
+                                  <div [ngSwitch]="switchInput9" id="9" #panel9>
+                                        <div *ngSwitchCase="'edit'">
+                                              <input type="text" class="form-control form-control-sm" placeholder="City Name"
+                                                    (keyup.enter)="OnInput($event, panel9.id)" />
+                                              <small class="form-text text-white text-center">Press 'Enter'</small>
+                                        </div>
+                                        <div *ngSwitchCase="'loading'" class="text-center">
+                                              <div class="spinner-grow text-light" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                              </div>
+                                        </div>
+                                        <div *ngSwitchCase="'weather'">
+                                              <div class="text-center">
+                                                    <div>{{ WeatherData[9].name }}</div>
+                                                    <div>{{ WeatherData[9].temp_celcius }}°</div>
+                                                    <div>
+                                                          {{ WeatherData[9].temp_min }}° / {{ WeatherData[9].temp_max }}°
+                                                    </div>
+                                                    <div>Weather Condition: {{ WeatherData[9].weather[0].main }}</div>
+                                                    <div>Feels Like: {{ WeatherData[9].temp_Feels_Like }}°</div>
+                                                    <div>Humidity: {{ WeatherData[9].main.humidity }}%</div>
+                                              </div>
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel9.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchCase="'error'" class="text-center">
+                                              <span> Wrong city name </span>
+                                              <br />
+                                              <br />
+                                              <button class="btn btn-outline-light btn-sm" type="button"
+                                                    (click)="toggleSwitch(panel9.id)">
+                                                    Edit Location
+                                              </button>
+                                        </div>
+                                        <div *ngSwitchDefault>
+                                              <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel9.id)">
+                                                    Select Location
+                                              </button>
+                                        </div>
+                                  </div>
+                            </div>     
+                            </div>        
+                           </div>
+           
       </div>
 </div>
