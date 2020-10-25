@@ -74,11 +74,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput1 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput1 = 'error';
+          if(error.status == 404){
+            this.switchInput1 = 'notFoundError';
+
+          }else{
+            this.switchInput1 = 'connectionError';
+          }
         }
       );
     } else if (id == 2) {
@@ -87,12 +91,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput2 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput2 = 'error';
-        }
+          if(error.status == 404){
+            this.switchInput2 = 'notFoundError';
+
+          }else{
+            this.switchInput2 = 'connectionError';
+          }        }
       );
     } else if (id == 3) {
       this.switchInput3 = 'loading'
@@ -100,11 +107,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput3 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput3 = 'error';
+          if(error.status == 404){
+            this.switchInput3 = 'notFoundError';
+
+          }else{
+            this.switchInput3 = 'connectionError';
+          }    
         }
       );
     } else if (id == 4) {
@@ -113,11 +124,16 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput4 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput4 = 'error';
+          if(error.status == 404){
+            this.switchInput4 = 'notFoundError';
+
+          }else{
+            this.switchInput4 = 'connectionError';
+          }      
+        
         }
       );
     } else if (id == 5) {
@@ -126,12 +142,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput5 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput5 = 'error';
-        }
+          if(error.status == 404){
+            this.switchInput5 = 'notFoundError';
+
+          }else{
+            this.switchInput5 = 'connectionError';
+          }        }
       );
     } else if (id == 6) {
       this.switchInput6 = 'loading'
@@ -139,12 +158,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput6 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput6 = 'error';
-        }
+          if(error.status == 404){
+            this.switchInput6 = 'notFoundError';
+
+          }else{
+            this.switchInput6 = 'connectionError';
+          }        }
       );
     } else if (id == 7) {
       this.switchInput7 = 'loading'
@@ -152,12 +174,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput7 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput7 = 'error';
-        }
+          if(error.status == 404){
+            this.switchInput7 = 'notFoundError';
+
+          }else{
+            this.switchInput7 = 'connectionError';
+          }        }
       );
     } else if (id == 8) {
       this.switchInput8 = 'loading'
@@ -165,12 +190,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput8 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput8 = 'error';
-        }
+          if(error.status == 404){
+            this.switchInput8 = 'notFoundError';
+
+          }else{
+            this.switchInput8 = 'connectionError';
+          }        }
       );
     } else if (id == 9) {
       this.switchInput9 = 'loading'
@@ -178,12 +206,15 @@ export class ContentComponent implements OnInit {
         (data) => {
           this.setWeatherData(data, id);
           this.switchInput9 = 'weather';
-          console.log(city);
         },
         (error) => {
           this.updateWeatherData(id);
-          this.switchInput9 = 'error';
-        }
+          if(error.status == 404){
+            this.switchInput9 = 'notFoundError';
+
+          }else{
+            this.switchInput9 = 'connectionError';
+          }        }
       );
     }
   }
@@ -352,7 +383,7 @@ export class ContentComponent implements OnInit {
       main: {},
       weather: [{ main: '' }],
     };
-    localStorage.removeItem(id);
+    // localStorage.removeItem(id);
   }
 
   setWeatherData(data, id) {

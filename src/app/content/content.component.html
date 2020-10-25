@@ -34,15 +34,24 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
-                                              <br />
-                                              <br />
+                                              <br>
+                                              <br>
                                               <button class="btn btn-outline-light btn-sm" type="button"
                                                     (click)="toggleSwitch(panel1.id)">
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel1.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel1.id)">
                                                     Select Location
@@ -83,7 +92,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -92,6 +101,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel2.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel2.id)">
                                                     Select Location
@@ -133,7 +151,7 @@
                                               </button>
                                         </div>
                 
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -142,6 +160,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel3.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel3.id)">
                                                     Select Location
@@ -182,7 +209,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -191,6 +218,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel4.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel4.id)">
                                                     Select Location
@@ -231,7 +267,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -240,6 +276,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel5.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel5.id)">
                                                     Select Location
@@ -280,7 +325,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -289,6 +334,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel6.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel6.id)">
                                                     Select Location
@@ -329,7 +383,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -338,6 +392,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel7.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel7.id)">
                                                     Select Location
@@ -378,7 +441,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -387,6 +450,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel8.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel8.id)">
                                                     Select Location
@@ -427,7 +499,7 @@
                                                     Edit Location
                                               </button>
                                         </div>
-                                        <div *ngSwitchCase="'error'" class="text-center">
+                                        <div *ngSwitchCase="'notFoundError'" class="text-center">
                                               <span> Wrong city name </span>
                                               <br />
                                               <br />
@@ -436,6 +508,15 @@
                                                     Edit Location
                                               </button>
                                         </div>
+                                        <div *ngSwitchCase="'connectionError'" class="text-center">
+                                          <span>Please Check Your Connection and Try Again</span>
+                                          <br>
+                                          <br>
+                                          <button class="btn btn-outline-light btn-sm" type="button"
+                                                (click)="toggleSwitch(panel9.id)">
+                                                Edit Location
+                                          </button>
+                                           </div>
                                         <div *ngSwitchDefault>
                                               <button type="button" class="btn btn-outline-light" (click)="toggleSwitch(panel9.id)">
                                                     Select Location
