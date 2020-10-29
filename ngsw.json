@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1603957874103,
+  "timestamp": 1603968579127,
   "index": "https://amaanmohd.github.io/Weather-Forcasting-PWA/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://amaanmohd.github.io/Weather-Forcasting-PWA/favicon.ico",
         "https://amaanmohd.github.io/Weather-Forcasting-PWA/index.html",
-        "https://amaanmohd.github.io/Weather-Forcasting-PWA/main.7342d8df4d3a6069de7b.js",
+        "https://amaanmohd.github.io/Weather-Forcasting-PWA/main.1409343684e853378472.js",
         "https://amaanmohd.github.io/Weather-Forcasting-PWA/manifest.webmanifest",
         "https://amaanmohd.github.io/Weather-Forcasting-PWA/polyfills.35a5ca1855eb057f016a.js",
         "https://amaanmohd.github.io/Weather-Forcasting-PWA/runtime.acf0dec4155e77772545.js",
@@ -76,8 +76,8 @@
     "https://amaanmohd.github.io/Weather-Forcasting-PWA/assets/images/snow.jpg": "9ec81b55ba84f4f71c49cbee2df752a47d59bcfa",
     "https://amaanmohd.github.io/Weather-Forcasting-PWA/assets/images/sunny.jpg": "8ff6ebaaadf22592a776d2e2dd7172454794fef2",
     "https://amaanmohd.github.io/Weather-Forcasting-PWA/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://amaanmohd.github.io/Weather-Forcasting-PWA/index.html": "cbcb31e94d0e1044517a69df287e5384f54e7a61",
-    "https://amaanmohd.github.io/Weather-Forcasting-PWA/main.7342d8df4d3a6069de7b.js": "9d6f95011218757f2ae3ed7a8caf8b2599fbb026",
+    "https://amaanmohd.github.io/Weather-Forcasting-PWA/index.html": "6cc04627b4637763a7f0819af44eecc1b58f1e7c",
+    "https://amaanmohd.github.io/Weather-Forcasting-PWA/main.1409343684e853378472.js": "e153c1ebfe581988c787038851a021b20af87e01",
     "https://amaanmohd.github.io/Weather-Forcasting-PWA/manifest.webmanifest": "70401e2fc7362f61371a39cbc04566c4d5f28ac6",
     "https://amaanmohd.github.io/Weather-Forcasting-PWA/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "https://amaanmohd.github.io/Weather-Forcasting-PWA/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
