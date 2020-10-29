@@ -1,10 +1,9 @@
 # WeatherApp
-Technology Used – Angular 10, Bootstrap,
-OpenWeatherMap API
- Network independent, works offline
- Installable
- Real-time updates
- different panels for different cities
+Technology Used – Angular 10, Bootstrap, OpenWeatherMap API
+Network independent, works offline
+Installable
+Real-time updates
+different panels for different cities
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
