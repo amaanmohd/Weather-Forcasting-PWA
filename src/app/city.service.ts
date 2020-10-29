@@ -17,7 +17,7 @@ export class CityService {
         return this.http.get(
           'https://api.openweathermap.org/data/2.5/weather?q=' +
             city +
-            '&appid=656e6411f16bc453a68ffc8614adf9ce'
+            '&appid='
         );
       }),
       share(),
